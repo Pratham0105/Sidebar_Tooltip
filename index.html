@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar2.O</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="bx bxl-c-plus-plus icon"></i>
+            <div class="logo_name">ProCode</div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search..">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="links-name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-user"></i>
+                    <span class="links-name">users</span>
+                </a>
+                <span class="tooltip">Users</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-chat"></i>
+                    <span class="links-name">Messeges</span>
+                </a>
+                <span class="tooltip">Messeges</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="links-name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-folder"></i>
+                    <span class="links-name">File Manager</span>
+                </a>
+                <span class="tooltip">File Manager</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cart-alt"></i>
+                    <span class="links-name">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-heart"></i>
+                    <spanc class="links-name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="links-name">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <!-- <img src="" alt="profileImg"> -->
+                    <div class="name_job">
+                        <div class="name">Pratham Parashar</div>
+                        <div class="job">Web Developer</div>
+                    </div>
+                </div>
+                <i class="bx bx-log-out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="text">Dashboard</div>
+    </section>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click",()=>{
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+        function menuBtnChange(){
+            if(sidebar.classList.contains("open")){
+                closeBtn.classList.replace("bx-menu","bx-menu-alt-right");
+            }else{
+                closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+            }
+        }
+    </script>
+</body>
+</html>
